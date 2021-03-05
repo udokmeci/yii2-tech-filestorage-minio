@@ -1,6 +1,4 @@
 <?php
-
-
 namespace udokmeci\yii2techfilestorage\storage;
 
 use Aws\S3\S3Client;
@@ -16,9 +14,9 @@ class Minio extends \yii2tech\filestorage\amazon\Storage
     public $bucketClassName = 'udokmeci\yii2techfilestorage\storage\Bucket';
 
 
-  /**
-     * @var string Amazon Bucket Region
-     */
+    /**
+       * @var string Amazon Bucket Region
+       */
     public $region = 'eu-west-1';
 
     /**
@@ -56,7 +54,7 @@ class Minio extends \yii2tech\filestorage\amazon\Storage
                 'secret' => $this->awsSecretKey,
             ],
         ];
-         if ($this->enableV4) {
+        if ($this->enableV4) {
             $settings['signature_version']='v4';
         }
 
