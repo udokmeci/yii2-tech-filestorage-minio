@@ -12,6 +12,7 @@ class Minio extends \yii2tech\filestorage\amazon\Storage
     private $_amazonS3;
     public $endpoint='http://0.0.0.0:9000';
     public $bucketClassName = 'udokmeci\yii2techfilestorage\storage\Bucket';
+    public $use_path_style_endpoint = false;
 
 
     /**
@@ -48,7 +49,7 @@ class Minio extends \yii2tech\filestorage\amazon\Storage
             'version' =>  $this->version,
             'region'  => $this->region,
             'endpoint' => $this->endpoint,
-            'use_path_style_endpoint' => true,
+            'use_path_style_endpoint' => $this->use_path_style_endpoint,
             'credentials' => [
                 'key'    => $this->awsKey,
                 'secret' => $this->awsSecretKey,
