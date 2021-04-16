@@ -50,6 +50,7 @@ class Minio extends \yii2tech\filestorage\amazon\Storage
             'region'  => $this->region,
             'endpoint' => $this->endpoint,
             'use_path_style_endpoint' => $this->use_path_style_endpoint,
+            'retries'=>0,
             'credentials' => [
                 'key'    => $this->awsKey,
                 'secret' => $this->awsSecretKey,
